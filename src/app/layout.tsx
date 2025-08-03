@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="/fonts/xiaomi-lan-ting.css" />
+        <link rel="stylesheet" href="/fonts/outfit.css" />
       </head>
       <body
         className="antialiased bg-gradient-to-br from-amber-50 via-stone-50 to-green-50 min-h-screen"

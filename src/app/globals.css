@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--xiaomi-font-stack);
-  --font-mono: var(--xiaomi-font-stack);
+  --font-sans: var(--outfit-font-stack);
+  --font-mono: var(--outfit-font-stack);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,5 +27,5 @@ html {
 body {
   background: transparent;
   color: var(--foreground);
-  font-family: var(--xiaomi-font-stack);
+  font-family: var(--outfit-font-stack);
 }

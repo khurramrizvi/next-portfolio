@@ -1,0 +1,48 @@
+/* Outfit Font Stack */
+/* Using Outfit font with appropriate fallbacks */
+
+:root {
+  --outfit-font-stack: 
+    'Outfit',
+    'Source Sans Pro',
+    'Roboto',
+    'Helvetica Neue',
+    'Arial',
+    sans-serif;
+}
+
+/* Import Outfit font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Fallback font definitions for better cross-platform support */
+body, 
+* {
+  font-family: var(--outfit-font-stack);
+}
+
+/* Ensure consistent font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Typography improvements for Outfit */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--outfit-font-stack);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+p, span, div {
+  font-family: var(--outfit-font-stack);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Button and interactive elements */
+button, .btn, a {
+  font-family: var(--outfit-font-stack);
+  font-weight: 500;
+}
