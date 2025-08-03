@@ -11,8 +11,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8 animate-slide-in-left">
-              <div className="flex items-center gap-3 text-gray-600 animate-fade-in animate-delay-200">
+            <div className="space-y-8">
+              <div className="flex items-center gap-3 text-gray-600 animate-fade-in animate-delay-100">
                 <div className="w-12 h-12 rounded-full overflow-hidden hover-scale">
                   <a href="https://linkedin.com/in/khurramrizvi" target="_blank" rel="noopener noreferrer">
                     <img 
@@ -30,7 +30,7 @@ export default function Home() {
                 </a>
               </div>
               
-              <div className="animate-fade-in animate-delay-300">
+              <div className="animate-fade-in animate-delay-200">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                     Product Manager
                     <br />
@@ -41,12 +41,12 @@ export default function Home() {
                   </h1>
               </div>
               
-              <p className="text-lg text-gray-600 max-w-lg leading-relaxed animate-fade-in animate-delay-400">
+              <p className="text-lg text-gray-600 max-w-lg leading-relaxed animate-fade-in animate-delay-300">
                  7+ years of experience in tech, delivering products from concept to launch. 
                  Recently promoted to Product Manager with a strong technical foundation.
                </p>
               
-              <div className="flex items-center gap-4 animate-fade-in animate-delay-500">
+              <div className="flex items-center gap-4 animate-fade-in animate-delay-400">
                 <Link 
                   href="/contact" 
                   className="bg-green-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-800 transition-colors hover-lift hover-glow"
