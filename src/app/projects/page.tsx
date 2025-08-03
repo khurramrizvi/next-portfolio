@@ -58,7 +58,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
             My Projects
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in animate-delay-200">
@@ -75,11 +75,11 @@ export default function Projects() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-green-700 rounded-lg flex items-center justify-center text-white font-bold text-xl hover-scale animate-float">
+                      <div className="w-12 h-12 bg-green-700 rounded-lg flex items-center justify-center text-white font-semibold text-xl hover-scale animate-float">
                         {project.title.charAt(0)}
                       </div>
                       <div>
-                        <h2 className="text-2xl font-bold text-gray-900">{project.title}</h2>
+                        <h2 className="text-2xl font-semibold text-gray-900">{project.title}</h2>
                         <p className="text-green-700 font-medium">{project.description}</p>
                       </div>
                     </div>
@@ -146,7 +146,7 @@ export default function Projects() {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-green-700 rounded-2xl p-8 text-white animate-on-scroll hover-lift animate-glow">
-            <h2 className="text-2xl font-bold mb-4 animate-fade-in">Interested in Working Together?</h2>
+            <h2 className="text-2xl font-semibold mb-4 animate-fade-in">Interested in Working Together?</h2>
             <p className="text-green-100 mb-6 max-w-2xl mx-auto animate-fade-in animate-delay-200">
               I'm always excited to take on new challenges and build products that make a difference. 
               Let's discuss how we can create something amazing together.

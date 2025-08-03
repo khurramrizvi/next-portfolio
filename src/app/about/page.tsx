@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
             About Me
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -16,7 +16,7 @@ export default function About() {
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">My Journey</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">My Journey</h2>
             <div className="space-y-4 text-gray-600">
               <p>
                 I'm Khurram Rizvi, an Indian software engineer turned Product Manager with over 
@@ -32,7 +32,7 @@ export default function About() {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Focus</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Current Focus</h2>
             <div className="space-y-4 text-gray-600">
               <p>
                 Currently working at <strong>Enso Group</strong> as a Product Manager, where I'm 
@@ -50,7 +50,7 @@ export default function About() {
 
         {/* Experience Timeline */}
         <div className="bg-white rounded-2xl p-8 shadow-lg mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Professional Experience</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-8">Professional Experience</h2>
           <div className="space-y-8">
             <div className="border-l-4 border-green-700 pl-6">
               <h3 className="text-xl font-semibold text-gray-900">Product Manager</h3>
@@ -83,7 +83,7 @@ export default function About() {
 
         {/* Skills & Technologies */}
         <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Skills & Technologies</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-8">Skills & Technologies</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Technical Skills</h3>

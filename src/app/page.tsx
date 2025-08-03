@@ -31,7 +31,7 @@ export default function Home() {
               </div>
               
               <div className="animate-fade-in animate-delay-200">
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
                     Product Manager
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-red-600 animate-float">
@@ -72,7 +72,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-gradient-to-br from-stone-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-8 animate-on-scroll">About Me</h2>
+            <h2 className="text-5xl font-semibold text-gray-900 mb-8 animate-on-scroll">About Me</h2>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -34,7 +34,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
             Let's Connect
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in animate-delay-200">
@@ -46,7 +46,7 @@ export default function Contact() {
         {/* Contact Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h2>
             <div className="space-y-4 text-gray-600">
               <p>
                 Whether you're looking for a Product Manager who can bridge the gap between 
@@ -67,7 +67,7 @@ export default function Contact() {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift animate-delay-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Status</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Current Status</h2>
             <div className="space-y-4 text-gray-600">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -90,7 +90,7 @@ export default function Contact() {
 
         {/* Social Links */}
         <div className="bg-white rounded-2xl p-8 shadow-lg mb-16 animate-on-scroll hover-lift">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Find Me Online</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Find Me Online</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialLinks.map((link, index) => (
               <a
@@ -113,7 +113,7 @@ export default function Contact() {
 
         {/* Contact Form */}
         <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
