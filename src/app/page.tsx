@@ -1,17 +1,19 @@
 import ThreeDAvater from '@/components/3dAvatar';
 import Link from 'next/link';
+import ScrollAnimations from '@/components/ScrollAnimations';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-50 to-green-50">
+      <ScrollAnimations />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 text-gray-600">
-                <div className="w-12 h-12 rounded-full overflow-hidden">
+            <div className="space-y-8 animate-slide-in-left">
+              <div className="flex items-center gap-3 text-gray-600 animate-fade-in animate-delay-200">
+                <div className="w-12 h-12 rounded-full overflow-hidden hover-scale">
                   <a href="https://linkedin.com/in/khurramrizvi" target="_blank" rel="noopener noreferrer">
                     <img 
                       src="/assets/profile-photo.jpeg" 
@@ -28,34 +30,34 @@ export default function Home() {
                 </a>
               </div>
               
-              <div>
+              <div className="animate-fade-in animate-delay-300">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                     Product Manager
                     <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-red-600">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-red-600 animate-float">
                       Mumbai India
                     </span>
                     <span className="text-red-500 animate-pulse">_</span>
                   </h1>
               </div>
               
-              <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
+              <p className="text-lg text-gray-600 max-w-lg leading-relaxed animate-fade-in animate-delay-400">
                  7+ years of experience in tech, delivering products from concept to launch. 
                  Recently promoted to Product Manager with a strong technical foundation.
                </p>
               
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 animate-fade-in animate-delay-500">
                 <Link 
                   href="/contact" 
-                  className="bg-green-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-800 transition-colors"
+                  className="bg-green-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-800 transition-colors hover-lift hover-glow"
                 >
-                  VIEW RESUME
+                  RESUME
                 </Link>
                 <Link 
                   href="/projects" 
-                  className="border border-green-300 text-green-700 px-8 py-4 rounded-xl font-semibold hover:bg-green-50 transition-colors"
+                  className="border border-green-300 text-green-700 px-8 py-4 rounded-xl font-semibold hover:bg-green-50 transition-colors hover-lift"
                 >
-                  VIEW PROJECTS
+                  PROJECTS
                 </Link>
               </div>
             </div>
@@ -70,11 +72,11 @@ export default function Home() {
       <section className="py-20 px-6 bg-gradient-to-br from-stone-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-8">About Me</h2>
+            <h2 className="text-5xl font-bold text-gray-900 mb-8 animate-on-scroll">About Me</h2>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 animate-on-scroll">
               <p className="text-lg text-gray-600 leading-relaxed">
                  With 7+ years in the tech industry, I've evolved from a passionate 
                  developer to a Product Manager who understands both the technical 
@@ -94,8 +96,8 @@ export default function Home() {
                </p>
             </div>
             
-            <div className="relative">
-              <div className="w-full h-[500px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden relative">
+            <div className="relative animate-on-scroll">
+              <div className="w-full h-[500px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden relative hover-scale">
                 <img 
                   src="/assets/profile-photo.jpeg" 
                   alt="Khurram Rizvi - Professional Photo" 
@@ -111,41 +113,41 @@ export default function Home() {
       {/* Skills Section */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 animate-on-scroll hover-lift">
+            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6 animate-float">
               <span className="text-2xl">📱</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Mobile & Web Development</h3>
             <p className="text-gray-600 mb-4">Cross-platform development with Flutter and modern web technologies</p>
             <div className="flex flex-wrap gap-2">
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Flutter</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Mobile Apps</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Web Apps</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover-scale">Flutter</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover-scale">Mobile Apps</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover-scale">Web Apps</span>
             </div>
           </div>
           
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 animate-on-scroll hover-lift animate-delay-200">
+            <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6 animate-float animate-delay-500">
               <span className="text-2xl">⚛️</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Full-Stack Development</h3>
             <p className="text-gray-600 mb-4">Frontend expertise with React/NextJS and backend development experience</p>
             <div className="flex flex-wrap gap-2">
-              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">React</span>
-              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">NextJS</span>
-              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">Backend</span>
+              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm hover-scale">React</span>
+              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm hover-scale">NextJS</span>
+              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm hover-scale">Backend</span>
             </div>
           </div>
           
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 animate-on-scroll hover-lift animate-delay-400">
+            <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6 animate-float animate-delay-600">
               <span className="text-2xl">🎯</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Product & Strategy</h3>
             <p className="text-gray-600 mb-4">Product management and strategic thinking</p>
             <div className="flex flex-wrap gap-2">
-              <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Product Strategy</span>
-              <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Leadership</span>
+              <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm hover-scale">Product Strategy</span>
+              <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm hover-scale">Leadership</span>
             </div>
           </div>
         </div>

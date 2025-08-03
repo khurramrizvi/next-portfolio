@@ -1,3 +1,5 @@
+import ScrollAnimations from '@/components/ScrollAnimations';
+
 export default function Projects() {
   const projects = [
     {
@@ -52,13 +54,14 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-50 to-green-50">
+      <ScrollAnimations />
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             My Projects
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in animate-delay-200">
             A showcase of products I've built and delivered, demonstrating my ability to 
             lead technical teams and create impactful solutions.
           </p>
@@ -67,12 +70,12 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <div key={project.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div key={project.id} className="bg-white rounded-2xl shadow-lg overflow-hidden animate-on-scroll hover-lift" style={{animationDelay: `${index * 0.2}s`}}>
               <div className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-green-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                      <div className="w-12 h-12 bg-green-700 rounded-lg flex items-center justify-center text-white font-bold text-xl hover-scale animate-float">
                         {project.title.charAt(0)}
                       </div>
                       <div>
@@ -115,7 +118,7 @@ export default function Projects() {
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="bg-green-100 text-green-800 px-3 py-1 rounded-lg text-sm"
+                          className="bg-green-100 text-green-800 px-3 py-1 rounded-lg text-sm hover-scale"
                         >
                           {tech}
                         </span>
@@ -142,15 +145,15 @@ export default function Projects() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-green-700 rounded-2xl p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">Interested in Working Together?</h2>
-            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+          <div className="bg-green-700 rounded-2xl p-8 text-white animate-on-scroll hover-lift animate-glow">
+            <h2 className="text-2xl font-bold mb-4 animate-fade-in">Interested in Working Together?</h2>
+            <p className="text-green-100 mb-6 max-w-2xl mx-auto animate-fade-in animate-delay-200">
               I'm always excited to take on new challenges and build products that make a difference. 
               Let's discuss how we can create something amazing together.
             </p>
             <a 
               href="/contact" 
-              className="inline-block bg-white text-green-700 px-8 py-3 rounded-lg font-medium hover:bg-green-50 transition-colors"
+              className="inline-block bg-white text-green-700 px-8 py-3 rounded-lg font-medium hover:bg-green-50 transition-colors hover-scale animate-fade-in animate-delay-300"
             >
               Get In Touch
             </a>

@@ -1,3 +1,5 @@
+import ScrollAnimations from '@/components/ScrollAnimations';
+
 export default function Contact() {
   const socialLinks = [
     {
@@ -28,13 +30,14 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-50 to-green-50">
+      <ScrollAnimations />
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Let's Connect
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in animate-delay-200">
             I'm always interested in discussing new opportunities, innovative projects, 
             and ways to create impactful products together.
           </p>
@@ -42,7 +45,7 @@ export default function Contact() {
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
             <div className="space-y-4 text-gray-600">
               <p>
@@ -63,11 +66,11 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift animate-delay-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Status</h2>
             <div className="space-y-4 text-gray-600">
               <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="font-medium">Available for new opportunities</span>
               </div>
               <p>
@@ -86,7 +89,7 @@ export default function Contact() {
         </div>
 
         {/* Social Links */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg mb-16">
+        <div className="bg-white rounded-2xl p-8 shadow-lg mb-16 animate-on-scroll hover-lift">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Find Me Online</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialLinks.map((link, index) => (
@@ -95,7 +98,8 @@ export default function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-gray-50 rounded-xl p-6 text-center hover:bg-green-50 transition-colors"
+                className="group bg-gray-50 rounded-xl p-6 text-center hover:bg-green-50 transition-colors hover-scale"
+                style={{animationDelay: `${index * 0.1}s`}}
               >
                 <div className="text-3xl mb-3">{link.icon}</div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">
@@ -108,7 +112,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
+        <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
@@ -163,7 +167,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full bg-green-700 text-white py-3 px-6 rounded-lg font-medium hover:bg-green-800 transition-colors"
+              className="w-full bg-green-700 text-white py-3 px-6 rounded-lg font-medium hover:bg-green-800 transition-colors hover-lift hover-glow"
             >
               Send Message
             </button>
