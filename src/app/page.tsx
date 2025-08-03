@@ -1,103 +1,155 @@
-import Image from "next/image";
+import ThreeDAvater from '@/components/3dAvatar';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-50 to-green-50">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div className="flex items-center gap-3 text-gray-600">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <a href="https://linkedin.com/in/khurramrizvi" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="/assets/profile-photo.jpeg" 
+                      alt="Khurram Rizvi - LinkedIn Profile" 
+                      className="w-full h-full object-cover object-top hover:opacity-80 transition-opacity"
+                    />
+                  </a>
+                </div>
+                <span className="text-lg">Khurram Rizvi</span>
+                <a href="https://linkedin.com/in/khurramrizvi" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:text-green-900 transition-colors">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+              
+              <div>
+                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                    Product Manager
+                    <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-red-600">
+                      Mumbai India
+                    </span>
+                    <span className="text-red-500 animate-pulse">_</span>
+                  </h1>
+              </div>
+              
+              <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
+                 7+ years of experience in tech, delivering products from concept to launch. 
+                 Recently promoted to Product Manager with a strong technical foundation.
+               </p>
+              
+              <div className="flex items-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="bg-green-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-800 transition-colors"
+                >
+                  VIEW RESUME
+                </Link>
+                <Link 
+                  href="/projects" 
+                  className="border border-green-300 text-green-700 px-8 py-4 rounded-xl font-semibold hover:bg-green-50 transition-colors"
+                >
+                  VIEW PROJECTS
+                </Link>
+              </div>
+            </div>
+            
+            {/* Right Content - 3D Character */}
+           {/* <ThreeDAvater/> */}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* About Me Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-stone-50 to-amber-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-gray-900 mb-8">About Me</h2>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                 With 7+ years in the tech industry, I've evolved from a passionate 
+                 developer to a Product Manager who understands both the technical 
+                 and business sides of product development.
+               </p>
+              
+              <p className="text-lg text-gray-600 leading-relaxed">
+                My technical journey spans Flutter development for mobile & web, 
+                React/NextJS for modern web applications, and backend development. 
+                I've successfully delivered multiple projects from conception to launch.
+              </p>
+              
+              <p className="text-lg text-gray-600 leading-relaxed">
+                 Recently promoted to Product Manager, I leverage my technical background 
+                 to bridge the gap between engineering teams and business objectives, 
+                 ensuring products are both technically sound and market-ready.
+               </p>
+            </div>
+            
+            <div className="relative">
+              <div className="w-full h-[500px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden relative">
+                <img 
+                  src="/assets/profile-photo.jpeg" 
+                  alt="Khurram Rizvi - Professional Photo" 
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+              <span className="text-2xl">📱</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Mobile & Web Development</h3>
+            <p className="text-gray-600 mb-4">Cross-platform development with Flutter and modern web technologies</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Flutter</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Mobile Apps</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Web Apps</span>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+              <span className="text-2xl">⚛️</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Full-Stack Development</h3>
+            <p className="text-gray-600 mb-4">Frontend expertise with React/NextJS and backend development experience</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">React</span>
+              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">NextJS</span>
+              <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">Backend</span>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Product & Strategy</h3>
+            <p className="text-gray-600 mb-4">Product management and strategic thinking</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Product Strategy</span>
+              <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Leadership</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,0 +1,27 @@
+/* Xiaomi Lan Ting Font Stack */
+/* Using system fonts that closely match Xiaomi Lan Ting characteristics */
+
+:root {
+  --xiaomi-font-stack: 
+    'Xiaomi Lan Ting',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    'WenQuanYi Micro Hei',
+    'Helvetica Neue',
+    'Arial',
+    sans-serif;
+}
+
+/* Fallback font definitions for better cross-platform support */
+body, 
+* {
+  font-family: var(--xiaomi-font-stack);
+}
+
+/* Ensure consistent font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
