@@ -5,8 +5,27 @@ import Navigation from "../components/Navigation";
 export const metadata: Metadata = {
   title: "Khurram Rizvi | Product Manager & Software Engineer",
   description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Currently at Enso Group.",
+  openGraph: {
+    title: "Khurram Rizvi | Product Manager & Software Engineer",
+    description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Currently at Enso Group.",
+    type: "website",
+    url: "https://krizvi.netlify.app",
+    images: [
+      {
+        url: "/assets/profile-photo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Khurram Rizvi - Product Manager & Software Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Khurram Rizvi | Product Manager & Software Engineer",
+    description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Currently at Enso Group.",
+    images: ["/assets/profile-photo.jpeg"],
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
