@@ -47,11 +47,11 @@ export const metadata: Metadata = {
     description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Bridging technology and business to create impactful products.",
     images: [
       {
-        url: "/og-home.svg",
+        url: "/og-home.png",
         width: 1200,
         height: 630,
         alt: "Khurram Rizvi - Product Manager & Software Engineer Portfolio",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
   },
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Khurram Rizvi | Product Manager & Software Engineer",
     description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery.",
-    images: ["/og-home.svg"],
+    images: ["/og-home.png"],
     creator: "@khurramrizvi",
   },
   verification: {

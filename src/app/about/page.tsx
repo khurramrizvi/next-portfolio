@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     url: "https://krizvi.netlify.app/about",
     images: [
       {
-        url: "/og-about.svg",
+        url: "/og-about.png",
         width: 1200,
         height: 630,
         alt: "About Khurram Rizvi - Product Manager & Software Engineer Journey",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Khurram Rizvi | Product Manager & Software Engineer",
     description: "Learn about my journey from Software Engineer to Product Manager. 7+ years of experience in tech.",
-    images: ["/og-about.svg"],
+    images: ["/og-about.png"],
   },
   alternates: {
     canonical: "https://krizvi.netlify.app/about",

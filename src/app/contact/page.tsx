@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     url: "https://krizvi.netlify.app/contact",
     images: [
       {
-        url: "/og-contact.svg",
+        url: "/og-contact.png",
         width: 1200,
         height: 630,
         alt: "Contact Khurram Rizvi - Product Manager & Technical Leader",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact | Khurram Rizvi Portfolio",
     description: "Get in touch for product management opportunities, technical leadership roles, and innovative project collaborations.",
-    images: ["/og-contact.svg"],
+    images: ["/og-contact.png"],
   },
   alternates: {
     canonical: "https://krizvi.netlify.app/contact",

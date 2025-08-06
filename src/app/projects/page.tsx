@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     url: "https://krizvi.netlify.app/projects",
     images: [
       {
-        url: "/og-projects.svg",
+        url: "/og-projects.png",
         width: 1200,
         height: 630,
         alt: "Khurram Rizvi Projects Portfolio - Mobile & Web Development",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Projects | Khurram Rizvi Portfolio",
     description: "Explore my portfolio of mobile and web development projects showcasing Flutter, React, and NextJS expertise.",
-    images: ["/og-projects.svg"],
+    images: ["/og-projects.png"],
   },
   alternates: {
     canonical: "https://krizvi.netlify.app/projects",
