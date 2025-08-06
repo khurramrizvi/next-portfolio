@@ -1,4 +1,45 @@
 import ScrollAnimations from '@/components/ScrollAnimations';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch with Khurram Rizvi for product management opportunities, technical leadership roles, and innovative project collaborations. Available for consulting and speaking engagements.",
+  keywords: [
+    "Contact Khurram Rizvi",
+    "Product Manager Contact",
+    "Technical Leadership",
+    "Project Collaboration",
+    "Consulting Services",
+    "Speaking Engagements",
+    "Mobile App Consulting",
+    "Web Development Consulting",
+    "Product Strategy",
+    "Tech Leadership"
+  ],
+  openGraph: {
+    title: "Contact | Khurram Rizvi Portfolio",
+    description: "Get in touch with Khurram Rizvi for product management opportunities, technical leadership roles, and innovative project collaborations. Available for consulting and speaking engagements.",
+    url: "https://krizvi.netlify.app/contact",
+    images: [
+      {
+        url: "/og-contact.svg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Khurram Rizvi - Product Manager & Technical Leader",
+        type: "image/svg+xml",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Khurram Rizvi Portfolio",
+    description: "Get in touch for product management opportunities, technical leadership roles, and innovative project collaborations.",
+    images: ["/og-contact.svg"],
+  },
+  alternates: {
+    canonical: "https://krizvi.netlify.app/contact",
+  },
+};
 
 export default function Contact() {
   const socialLinks = [
@@ -29,15 +70,15 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-50 to-green-50">
+    <div className="min-h-screen">
       <ScrollAnimations />
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
+        <div className="text-center mb-16 animate-breathe">
+          <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 mb-6">
             Let's Connect
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in animate-delay-200">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto animate-breathe animate-delay-200">
             I'm always interested in discussing new opportunities, innovative projects, 
             and ways to create impactful products together.
           </p>
@@ -45,9 +86,9 @@ export default function Contact() {
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h2>
-            <div className="space-y-4 text-gray-600">
+          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-6">Get In Touch</h2>
+            <div className="space-y-4 text-slate-600">
               <p>
                 Whether you're looking for a Product Manager who can bridge the gap between 
                 technical implementation and business strategy, or a technical leader who 
@@ -66,11 +107,11 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift animate-delay-200">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Current Status</h2>
-            <div className="space-y-4 text-gray-600">
+          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift animate-delay-200">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-6">Current Status</h2>
+            <div className="space-y-4 text-slate-600">
               <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-slate-400 rounded-full animate-pulse"></div>
                 <span className="font-medium">Available for new opportunities</span>
               </div>
               <p>
@@ -89,8 +130,8 @@ export default function Contact() {
         </div>
 
         {/* Social Links */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg mb-16 animate-on-scroll hover-lift">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Find Me Online</h2>
+        <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border mb-16 animate-on-scroll hover-lift">
+          <h2 className="text-2xl font-semibold text-slate-800 mb-8 text-center">Find Me Online</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialLinks.map((link, index) => (
               <a
@@ -98,81 +139,81 @@ export default function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-gray-50 rounded-xl p-6 text-center hover:bg-green-50 transition-colors hover-scale"
+                className="group bg-slate-50/70 rounded-2xl p-6 text-center hover:bg-slate-100/70 transition-colors hover-scale"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <div className="text-3xl mb-3">{link.icon}</div>
-                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">
+                <h3 className="font-semibold text-slate-800 mb-2 group-hover:text-slate-600 transition-colors">
                   {link.name}
                 </h3>
-                <p className="text-sm text-gray-600">{link.description}</p>
+                <p className="text-sm text-slate-600">{link.description}</p>
               </a>
             ))}
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll hover-lift">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send a Message</h2>
+        <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift">
+          <h2 className="text-2xl font-semibold text-slate-800 mb-6">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
                   placeholder="your.email@example.com"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
                 placeholder="What's this about?"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={6}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
                 placeholder="Tell me about your project or opportunity..."
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-green-700 text-white py-3 px-6 rounded-lg font-medium hover:bg-green-800 transition-colors hover-lift hover-glow"
+              className="w-full bg-slate-600 text-white py-3 px-6 rounded-2xl font-medium hover:bg-slate-700 transition-colors hover-lift soft-shadow"
             >
               Send Message
             </button>
           </form>
-          <p className="text-sm text-gray-500 mt-4 text-center">
+          <p className="text-sm text-slate-500 mt-4 text-center">
             Note: This is a demo form. Please use the email or social links above to contact me directly.
           </p>
         </div>

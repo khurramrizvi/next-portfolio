@@ -3,27 +3,68 @@ import "./globals.css";
 import Navigation from "../components/Navigation";
 
 export const metadata: Metadata = {
-  title: "Khurram Rizvi | Product Manager & Software Engineer",
-  description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Currently at Enso Group.",
+  title: {
+    default: "Khurram Rizvi | Product Manager & Software Engineer",
+    template: "%s | Khurram Rizvi"
+  },
+  description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Bridging technology and business to create impactful products.",
+  keywords: [
+    "Product Manager",
+    "Software Engineer",
+    "Flutter Developer",
+    "React Developer",
+    "NextJS",
+    "Mobile Development",
+    "Web Development",
+    "Product Strategy",
+    "Tech Leadership",
+    "Mumbai",
+    "India",
+    "Portfolio"
+  ],
+  authors: [{ name: "Khurram Rizvi" }],
+  creator: "Khurram Rizvi",
+  publisher: "Khurram Rizvi",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: "Khurram Rizvi | Product Manager & Software Engineer",
-    description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Currently at Enso Group.",
     type: "website",
+    locale: "en_US",
     url: "https://krizvi.netlify.app",
+    siteName: "Khurram Rizvi Portfolio",
+    title: "Khurram Rizvi | Product Manager & Software Engineer",
+    description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Bridging technology and business to create impactful products.",
     images: [
       {
-        url: "/assets/profile-photo.jpeg",
+        url: "/og-home.svg",
         width: 1200,
         height: 630,
-        alt: "Khurram Rizvi - Product Manager & Software Engineer",
+        alt: "Khurram Rizvi - Product Manager & Software Engineer Portfolio",
+        type: "image/svg+xml",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Khurram Rizvi | Product Manager & Software Engineer",
-    description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Currently at Enso Group.",
-    images: ["/assets/profile-photo.jpeg"],
+    description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery.",
+    images: ["/og-home.svg"],
+    creator: "@khurramrizvi",
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  alternates: {
+    canonical: "https://krizvi.netlify.app",
   },
 };
 export default function RootLayout({
@@ -37,7 +78,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/fonts/outfit.css" />
       </head>
       <body
-        className="antialiased bg-gradient-to-br from-amber-50 via-stone-50 to-green-50 min-h-screen"
+        className="antialiased min-h-screen"
       >
         <Navigation />
         <main className="pt-20">

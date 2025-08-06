@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projectsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#10b981" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#projectsBg)"/>
+  
+  <!-- Decorative elements -->
+  <rect x="80" y="80" width="40" height="40" rx="8" fill="#bbf7d0" opacity="0.6" transform="rotate(12 100 100)"/>
+  <circle cx="1050" cy="150" r="45" fill="#fed7aa" opacity="0.4"/>
+  <rect x="1000" y="450" width="50" height="50" rx="10" fill="#ddd6fe" opacity="0.5" transform="rotate(-15 1025 475)"/>
+  
+  <!-- Main content container -->
+  <rect x="120" y="140" width="960" height="350" rx="24" fill="white" opacity="0.9" filter="url(#softShadow)"/>
+  
+  <!-- Code icon -->
+  <rect x="200" y="200" width="80" height="80" rx="12" fill="#10b981" opacity="0.1"/>
+  <text x="240" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="40" text-anchor="middle" fill="#059669">💻</text>
+  
+  <!-- Main text -->
+  <text x="320" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="48" font-weight="700" fill="#1f2937">My Projects</text>
+  <text x="320" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" fill="#6b7280">Mobile & Web Development Portfolio</text>
+  
+  <!-- Tech stack badges -->
+  <rect x="200" y="320" width="100" height="32" rx="16" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="250" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#1d4ed8">Flutter</text>
+  
+  <rect x="320" y="320" width="80" height="32" rx="16" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="360" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#047857">React</text>
+  
+  <rect x="420" y="320" width="90" height="32" rx="16" fill="#fef7ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="465" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#7c3aed">NextJS</text>
+  
+  <rect x="530" y="320" width="100" height="32" rx="16" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="580" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#d97706">Backend</text>
+  
+  <!-- Project showcase elements -->
+  <rect x="200" y="380" width="120" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="210" y="390" width="100" height="4" rx="2" fill="#cbd5e1"/>
+  <rect x="210" y="400" width="80" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="210" y="410" width="60" height="4" rx="2" fill="#f1f5f9"/>
+  <circle cx="280" cy="440" r="12" fill="#10b981"/>
+  
+  <rect x="340" y="380" width="120" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="350" y="390" width="100" height="4" rx="2" fill="#cbd5e1"/>
+  <rect x="350" y="400" width="70" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="350" y="410" width="90" height="4" rx="2" fill="#f1f5f9"/>
+  <circle cx="420" cy="440" r="12" fill="#3b82f6"/>
+</svg>
