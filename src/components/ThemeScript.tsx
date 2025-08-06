@@ -3,21 +3,34 @@ const ThemeScript = () => {
     (function() {
       try {
         var theme = localStorage.getItem('theme');
-        var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        var systemTheme = mediaQuery.matches ? 'dark' : 'light';
         
-        // Determine the correct theme
-        var shouldBeDark = theme === 'dark' || (theme === 'system' && systemTheme === 'dark') || (!theme && systemTheme === 'dark');
+        var applyTheme = function() {
+          var shouldBeDark = theme === 'dark' || (theme === 'system' && mediaQuery.matches) || (!theme && mediaQuery.matches);
+          var currentlyDark = document.documentElement.classList.contains('dark');
+          
+          if (shouldBeDark && !currentlyDark) {
+            document.documentElement.classList.remove('light');
+            document.documentElement.classList.add('dark');
+          } else if (!shouldBeDark && currentlyDark) {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          }
+        };
         
-        // Only update if different from current state to minimize hydration issues
-        var currentlyDark = document.documentElement.classList.contains('dark');
+        var handleSystemThemeChange = function() {
+          if (theme === 'system' || !theme) {
+            applyTheme();
+          }
+        };
         
-        if (shouldBeDark && !currentlyDark) {
-          document.documentElement.classList.remove('light');
-          document.documentElement.classList.add('dark');
-        } else if (!shouldBeDark && currentlyDark) {
-          document.documentElement.classList.remove('dark');
-          document.documentElement.classList.add('light');
-        }
+        // Apply theme initially
+        applyTheme();
+        
+        // Listen for system theme changes
+        mediaQuery.addEventListener('change', handleSystemThemeChange);
+        
       } catch (e) {
         // Fallback: ensure light theme if no dark class
         if (!document.documentElement.classList.contains('dark')) {

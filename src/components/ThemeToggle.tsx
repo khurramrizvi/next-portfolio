@@ -20,22 +20,46 @@ const ThemeToggle = () => {
     if (!mounted) return;
 
     const root = document.documentElement;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else if (theme === 'light') {
-      root.classList.remove('dark');
-    } else {
-      // System theme
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      if (systemTheme === 'dark') {
+    const applyTheme = () => {
+      if (theme === 'dark') {
         root.classList.add('dark');
-      } else {
+        root.classList.remove('light');
+      } else if (theme === 'light') {
         root.classList.remove('dark');
+        root.classList.add('light');
+      } else {
+        // System theme
+        const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+        if (systemTheme === 'dark') {
+          root.classList.add('dark');
+          root.classList.remove('light');
+        } else {
+          root.classList.remove('dark');
+          root.classList.add('light');
+        }
       }
-    }
+    };
+
+    const handleSystemThemeChange = () => {
+      if (theme === 'system') {
+        applyTheme();
+      }
+    };
+
+    // Apply theme initially
+    applyTheme();
+    
+    // Listen for system theme changes
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
 
     localStorage.setItem('theme', theme);
+    
+    // Cleanup listener
+    return () => {
+      mediaQuery.removeEventListener('change', handleSystemThemeChange);
+    };
   }, [theme, mounted]);
 
   const toggleTheme = () => {
