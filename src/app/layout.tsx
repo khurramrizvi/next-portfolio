@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://krizvi.netlify.app",
+    url: "https://khurramrizvipm.netlify.app",
     siteName: "Khurram Rizvi Portfolio",
     title: "Khurram Rizvi | Product Manager & Software Engineer",
     description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery. Bridging technology and business to create impactful products.",
     images: [
       {
-        url: "/og-home.png",
+        url: "https://khurramrizvipm.netlify.app/og-home.png",
         width: 1200,
         height: 630,
         alt: "Khurram Rizvi - Product Manager & Software Engineer Portfolio",
@@ -59,14 +59,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Khurram Rizvi | Product Manager & Software Engineer",
     description: "Product Manager and Software Engineer with 7+ years of experience in Flutter, React, NextJS, and product delivery.",
-    images: ["/og-home.png"],
+    images: ["https://khurramrizvipm.netlify.app/og-home.png"],
     creator: "@khurramrizvi",
   },
   verification: {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://krizvi.netlify.app",
+    canonical: "https://khurramrizvipm.netlify.app",
   },
 };
 export default function RootLayout({

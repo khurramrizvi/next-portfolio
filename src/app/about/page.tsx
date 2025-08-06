@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Khurram Rizvi | Product Manager & Software Engineer",
     description: "Learn about my journey from Software Engineer to Product Manager. 7+ years of experience in Flutter, React, NextJS development and product strategy.",
-    url: "https://krizvi.netlify.app/about",
+    url: "https://khurramrizvipm.netlify.app/about",
     images: [
       {
-        url: "/og-about.png",
+        url: "https://khurramrizvipm.netlify.app/og-about.png",
         width: 1200,
         height: 630,
         alt: "About Khurram Rizvi - Product Manager & Software Engineer Journey",
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Khurram Rizvi | Product Manager & Software Engineer",
     description: "Learn about my journey from Software Engineer to Product Manager. 7+ years of experience in tech.",
-    images: ["/og-about.png"],
+    images: ["https://khurramrizvipm.netlify.app/og-about.png"],
   },
   alternates: {
-    canonical: "https://krizvi.netlify.app/about",
+    canonical: "https://khurramrizvipm.netlify.app/about",
   },
 };
 

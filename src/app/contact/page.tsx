@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact | Khurram Rizvi Portfolio",
     description: "Get in touch with Khurram Rizvi for product management opportunities, technical leadership roles, and innovative project collaborations. Available for consulting and speaking engagements.",
-    url: "https://krizvi.netlify.app/contact",
+    url: "https://khurramrizvipm.netlify.app/contact",
     images: [
       {
-        url: "/og-contact.png",
+        url: "https://khurramrizvipm.netlify.app/og-contact.png",
         width: 1200,
         height: 630,
         alt: "Contact Khurram Rizvi - Product Manager & Technical Leader",
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact | Khurram Rizvi Portfolio",
     description: "Get in touch for product management opportunities, technical leadership roles, and innovative project collaborations.",
-    images: ["/og-contact.png"],
+    images: ["https://khurramrizvipm.netlify.app/og-contact.png"],
   },
   alternates: {
-    canonical: "https://krizvi.netlify.app/contact",
+    canonical: "https://khurramrizvipm.netlify.app/contact",
   },
 };
 

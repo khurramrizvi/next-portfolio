@@ -19,10 +19,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Projects | Khurram Rizvi Portfolio",
     description: "Explore my portfolio of mobile and web development projects. From InfoProfile social media platform to Bharat Khata lending solution - showcasing Flutter, React, and NextJS expertise.",
-    url: "https://krizvi.netlify.app/projects",
+    url: "https://khurramrizvipm.netlify.app/projects",
     images: [
       {
-        url: "/og-projects.png",
+        url: "https://khurramrizvipm.netlify.app/og-projects.png",
         width: 1200,
         height: 630,
         alt: "Khurram Rizvi Projects Portfolio - Mobile & Web Development",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Projects | Khurram Rizvi Portfolio",
     description: "Explore my portfolio of mobile and web development projects showcasing Flutter, React, and NextJS expertise.",
-    images: ["/og-projects.png"],
+    images: ["https://khurramrizvipm.netlify.app/og-projects.png"],
   },
   alternates: {
-    canonical: "https://krizvi.netlify.app/projects",
+    canonical: "https://khurramrizvipm.netlify.app/projects",
   },
 };
 
