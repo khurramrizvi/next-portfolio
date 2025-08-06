@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white hero-grid">
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="mb-16">
@@ -57,7 +57,7 @@ export default function About() {
 
         {/* Main Content */}
         <div className="space-y-16 mb-16">
-          <div className="border-t border-gray-200 pt-16">
+          <div className="border-t border-gray-200 pt-16 grid-overlay">
             <h2 className="text-2xl font-normal text-black mb-6">My Journey</h2>
             <div className="space-y-4 text-gray-600">
               <p>
@@ -73,7 +73,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="border-t border-gray-200 pt-16">
+          <div className="border-t border-gray-200 pt-16 large-grid">
             <h2 className="text-2xl font-normal text-black mb-6">Current Focus</h2>
             <div className="space-y-4 text-gray-600">
               <p>

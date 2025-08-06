@@ -94,7 +94,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen hero-grid">
       <ScrollAnimations />
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Header */}
@@ -109,7 +109,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="space-y-12">
+        <div className="space-y-12 grid-overlay">
           {projects.map((project, index) => (
             <div key={project.id} className="border-t border-gray-200 pt-12 first:border-t-0 first:pt-0">
               <div>
@@ -180,7 +180,7 @@ export default function Projects() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 border-t border-gray-200 pt-16">
+        <div className="mt-16 border-t border-gray-200 pt-16 large-grid">
           <div className="max-w-2xl">
             <h2 className="text-2xl font-normal text-black mb-4">Interested in Working Together?</h2>
             <p className="text-gray-600 mb-6">

@@ -46,7 +46,7 @@ export default function Home() {
     <div className="min-h-screen bg-transparent">
       <ScrollAnimations />
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-6 hero-grid">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             <div className="animate-fade-in">
@@ -78,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section className="py-20 px-6 border-t border-gray-200">
+      <section className="py-20 px-6 border-t border-gray-200 grid-overlay">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-12">
             <h2 className="text-4xl font-normal text-black animate-on-scroll">About</h2>
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200">
+      <section className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 large-grid">
         <div className="space-y-12">
           <h2 className="text-4xl font-normal text-black animate-on-scroll">Skills</h2>
           

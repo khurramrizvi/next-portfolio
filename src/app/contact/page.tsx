@@ -74,7 +74,7 @@ const socialLinks = [
 ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen hero-grid">
       <ScrollAnimations />
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
@@ -89,7 +89,7 @@ const socialLinks = [
         </div>
 
         {/* Contact Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16 grid-overlay">
           <div className="border border-gray-200 rounded p-8">
             <h2 className="text-2xl font-normal text-black mb-6">Get In Touch</h2>
             <div className="space-y-4 text-gray-600">
@@ -134,7 +134,7 @@ const socialLinks = [
         </div>
 
         {/* Social Links */}
-        <div className="border border-gray-200 rounded p-8 mb-16">
+        <div className="border border-gray-200 rounded p-8 mb-16 large-grid">
           <h2 className="text-2xl font-normal text-black mb-8">Find Me Online</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialLinks.map((link, index) => (
@@ -156,7 +156,7 @@ const socialLinks = [
         </div>
 
         {/* Contact Form */}
-        <div className="border border-gray-200 rounded p-8">
+        <div className="border border-gray-200 rounded p-8 grid-overlay">
           <h2 className="text-2xl font-normal text-black mb-6">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
