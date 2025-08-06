@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
 import "./globals.css";
 import Navigation from "../components/Navigation";
 
@@ -75,9 +73,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en">
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/samsung-sans-4" rel="stylesheet" />
+      </head>
       <body
-        className="antialiased min-h-screen font-sans"
+        className="antialiased min-h-screen"
+        style={{ fontFamily: "'Samsung Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}
       >
         <Navigation />
         <main className="pt-20">
