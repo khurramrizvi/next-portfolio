@@ -74,15 +74,15 @@ const socialLinks = [
 ];
 
   return (
-    <div className="min-h-screen hero-grid">
+    <div className="min-h-screen bg-background hero-grid">
       <ScrollAnimations />
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-normal text-black mb-6">
+          <h1 className="text-4xl md:text-5xl font-normal text-primary mb-6">
             Contact
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl">
+          <p className="text-xl text-secondary max-w-3xl">
             I'm always interested in discussing new opportunities, innovative projects, 
             and ways to create impactful products together.
           </p>
@@ -90,9 +90,9 @@ const socialLinks = [
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16 grid-overlay">
-          <div className="border border-gray-200 rounded p-8">
-            <h2 className="text-2xl font-normal text-black mb-6">Get In Touch</h2>
-            <div className="space-y-4 text-gray-600">
+          <div className="border border-geist-4 rounded p-8">
+            <h2 className="text-2xl font-normal text-primary mb-6">Get In Touch</h2>
+            <div className="space-y-4 text-secondary">
               <p>
                 Whether you're looking for a Product Manager who can bridge the gap between 
                 technical implementation and business strategy, or a technical leader who 
@@ -111,11 +111,11 @@ const socialLinks = [
             </div>
           </div>
 
-          <div className="border border-gray-200 rounded p-8">
-            <h2 className="text-2xl font-normal text-black mb-6">Current Status</h2>
-            <div className="space-y-4 text-gray-600">
+          <div className="border border-geist-4 rounded p-8">
+            <h2 className="text-2xl font-normal text-primary mb-6">Current Status</h2>
+            <div className="space-y-4 text-secondary">
               <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-geist-6 rounded-full"></div>
                 <span className="font-medium">Available for new opportunities</span>
               </div>
               <p>
@@ -134,8 +134,8 @@ const socialLinks = [
         </div>
 
         {/* Social Links */}
-        <div className="border border-gray-200 rounded p-8 mb-16 large-grid">
-          <h2 className="text-2xl font-normal text-black mb-8">Find Me Online</h2>
+        <div className="border border-geist-4 rounded p-8 mb-16 large-grid">
+          <h2 className="text-2xl font-normal text-primary mb-8">Find Me Online</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialLinks.map((link, index) => (
               <a
@@ -143,80 +143,80 @@ const socialLinks = [
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group border border-gray-200 rounded p-6 text-center hover:border-gray-300 transition-colors"
+                className="group border border-geist-4 rounded p-6 text-center hover:border-geist-5 transition-colors"
               >
-                <div className="text-3xl mb-3 flex justify-center">{link.icon}</div>
-                <h3 className="font-medium text-black mb-2 group-hover:text-gray-600 transition-colors">
+                <div className="text-3xl mb-3 flex justify-center text-primary">{link.icon}</div>
+                <h3 className="font-medium text-primary mb-2 group-hover:text-secondary transition-colors">
                   {link.name}
                 </h3>
-                <p className="text-sm text-gray-600">{link.description}</p>
+                <p className="text-sm text-secondary">{link.description}</p>
               </a>
             ))}
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="border border-gray-200 rounded p-8 grid-overlay">
-          <h2 className="text-2xl font-normal text-black mb-6">Send a Message</h2>
+        <div className="border border-geist-4 rounded p-8 grid-overlay">
+          <h2 className="text-2xl font-normal text-primary mb-6">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-primary mb-2">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-geist-4 rounded focus:ring-2 focus:ring-geist-6 focus:border-transparent bg-background text-primary"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-geist-4 rounded focus:ring-2 focus:ring-geist-6 focus:border-transparent bg-background text-primary"
                   placeholder="your.email@example.com"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-black mb-2">
+              <label htmlFor="subject" className="block text-sm font-medium text-primary mb-2">
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+                className="w-full px-4 py-3 border border-geist-4 rounded focus:ring-2 focus:ring-geist-6 focus:border-transparent bg-background text-primary"
                 placeholder="What's this about?"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-primary mb-2">
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={6}
-                className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+                className="w-full px-4 py-3 border border-geist-4 rounded focus:ring-2 focus:ring-geist-6 focus:border-transparent bg-background text-primary"
                 placeholder="Tell me about your project or opportunity..."
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-black text-white py-3 px-6 rounded font-medium hover:bg-gray-800 transition-colors"
+              className="w-full bg-geist-10 text-background py-3 px-6 rounded font-medium hover:bg-geist-8 transition-colors"
             >
               Send Message
             </button>
           </form>
-          <p className="text-sm text-gray-500 mt-4 text-center">
+          <p className="text-sm text-geist-7 mt-4 text-center">
             Note: This is a demo form. Please use the email or social links above to contact me directly.
           </p>
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "../components/Navigation";
+import ThemeScript from "../components/ThemeScript";
 
 export const metadata: Metadata = {
   title: {
@@ -73,12 +74,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <head>
+        <ThemeScript />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         <link href="https://fonts.cdnfonts.com/css/samsung-sans-4" rel="stylesheet" />
       </head>
       <body
-        className="antialiased min-h-screen"
+        className="antialiased min-h-screen transition-colors duration-200"
         style={{ fontFamily: "'Samsung Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}
       >
         <Navigation />
