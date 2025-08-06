@@ -98,11 +98,11 @@ export default function Projects() {
       <ScrollAnimations />
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Header */}
-        <div className="text-center mb-16 animate-breathe">
-          <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 mb-6">
-            My Projects
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-normal text-black mb-6">
+            Projects
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto animate-breathe animate-delay-200">
+          <p className="text-xl text-gray-600 max-w-3xl">
             A showcase of products I've built and delivered, demonstrating my ability to 
             lead technical teams and create impactful solutions.
           </p>
@@ -111,35 +111,30 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <div key={project.id} className="bg-white/70 backdrop-blur-sm rounded-3xl soft-shadow gentle-border overflow-hidden animate-on-scroll hover-lift" style={{animationDelay: `${index * 0.2}s`}}>
-              <div className="p-8">
+            <div key={project.id} className="border-t border-gray-200 pt-12 first:border-t-0 first:pt-0">
+              <div>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-slate-600 rounded-2xl flex items-center justify-center text-white font-semibold text-xl hover-scale animate-gentle-float">
-                        {project.title.charAt(0)}
-                      </div>
-                      <div>
-                        <h2 className="text-2xl font-semibold text-slate-800">{project.title}</h2>
-                        <p className="text-slate-600 font-medium">{project.description}</p>
-                      </div>
+                    <div className="mb-4">
+                      <h2 className="text-2xl font-normal text-black mb-2">{project.title}</h2>
+                      <p className="text-gray-600">{project.description}</p>
                     </div>
                     
                     <div className="grid md:grid-cols-2 gap-4 mb-6 text-sm">
                       <div>
-                        <span className="font-semibold text-slate-700">Role: </span>
-                        <span className="text-slate-600">{project.role}</span>
+                        <span className="font-medium text-black">Role: </span>
+                        <span className="text-gray-600">{project.role}</span>
                       </div>
                       <div>
-                        <span className="font-semibold text-slate-700">Company: </span>
-                        <span className="text-slate-600">{project.company}</span>
+                        <span className="font-medium text-black">Company: </span>
+                        <span className="text-gray-600">{project.company}</span>
                       </div>
                       <div>
-                        <span className="font-semibold text-slate-700">Status: </span>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        <span className="font-medium text-black">Status: </span>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${
                           project.status === 'Completed' 
-                            ? 'bg-slate-100 text-slate-700' 
-                            : 'bg-slate-100 text-slate-600'
+                            ? 'bg-gray-100 text-gray-700' 
+                            : 'bg-gray-100 text-gray-600'
                         }`}>
                           {project.status}
                         </span>
@@ -148,18 +143,18 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <p className="text-slate-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   {project.longDescription}
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="font-semibold text-slate-800 mb-3">Technologies Used</h3>
+                    <h3 className="font-medium text-black mb-3">Technologies Used</h3>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="bg-slate-100 text-slate-700 px-3 py-1 rounded-2xl text-sm hover-scale"
+                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm"
                         >
                           {tech}
                         </span>
@@ -168,11 +163,11 @@ export default function Projects() {
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-slate-800 mb-3">Key Achievements</h3>
+                    <h3 className="font-medium text-black mb-3">Key Achievements</h3>
                     <ul className="space-y-2">
                       {project.highlights.map((highlight, highlightIndex) => (
-                        <li key={highlightIndex} className="flex items-start gap-2 text-sm text-slate-600">
-                          <span className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0"></span>
+                        <li key={highlightIndex} className="flex items-start gap-2 text-sm text-gray-600">
+                          <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
                           {highlight}
                         </li>
                       ))}
@@ -185,16 +180,16 @@ export default function Projects() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-slate-600/80 backdrop-blur-sm rounded-3xl p-8 text-white animate-on-scroll hover-lift soft-shadow">
-            <h2 className="text-2xl font-semibold mb-4 animate-breathe">Interested in Working Together?</h2>
-            <p className="text-slate-100 mb-6 max-w-2xl mx-auto animate-breathe animate-delay-200">
+        <div className="mt-16 border-t border-gray-200 pt-16">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl font-normal text-black mb-4">Interested in Working Together?</h2>
+            <p className="text-gray-600 mb-6">
               I'm always excited to take on new challenges and build products that make a difference. 
               Let's discuss how we can create something amazing together.
             </p>
             <a 
               href="/contact" 
-              className="inline-block bg-white text-slate-700 px-8 py-3 rounded-2xl font-medium hover:bg-slate-50 transition-colors hover-scale animate-breathe animate-delay-300"
+              className="inline-block bg-black text-white px-6 py-2 rounded font-medium hover:bg-gray-800 transition-colors"
             >
               Get In Touch
             </a>

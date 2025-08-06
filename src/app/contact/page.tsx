@@ -1,5 +1,7 @@
 import ScrollAnimations from '@/components/ScrollAnimations';
 import type { Metadata } from 'next';
+import { FiMail } from 'react-icons/fi';
+import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -42,43 +44,45 @@ export const metadata: Metadata = {
 };
 
 export default function Contact() {
-  const socialLinks = [
-    {
-      name: "Email",
-      href: "mailto:khurram@example.com",
-      icon: "📧",
-      description: "Drop me a line"
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/khurramrizvi",
-      icon: "🐦",
-      description: "Follow me on Twitter"
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/khurramrizvi",
-      icon: "💻",
-      description: "Check out my code"
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/khurramrizvi",
-      icon: "💼",
-      description: "Connect professionally"
-    }
-  ];
+
+
+const socialLinks = [
+  {
+    name: "Email",
+    href: "mailto:khurram@example.com",
+    icon: <FiMail className="w-8 h-8" />,
+    description: "Drop me a line"
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com/khurramrizvi",
+    icon: <FaTwitter className="w-8 h-8" />,
+    description: "Follow me on Twitter"
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/khurramrizvi",
+    icon: <FaGithub className="w-8 h-8" />,
+    description: "Check out my code"
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/khurramrizvi",
+    icon: <FaLinkedin className="w-8 h-8" />,
+    description: "Connect professionally"
+  }
+];
 
   return (
     <div className="min-h-screen">
       <ScrollAnimations />
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
-        <div className="text-center mb-16 animate-breathe">
-          <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 mb-6">
-            Let's Connect
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-normal text-black mb-6">
+            Contact
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto animate-breathe animate-delay-200">
+          <p className="text-xl text-gray-600 max-w-3xl">
             I'm always interested in discussing new opportunities, innovative projects, 
             and ways to create impactful products together.
           </p>
@@ -86,9 +90,9 @@ export default function Contact() {
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift">
-            <h2 className="text-2xl font-semibold text-slate-800 mb-6">Get In Touch</h2>
-            <div className="space-y-4 text-slate-600">
+          <div className="border border-gray-200 rounded p-8">
+            <h2 className="text-2xl font-normal text-black mb-6">Get In Touch</h2>
+            <div className="space-y-4 text-gray-600">
               <p>
                 Whether you're looking for a Product Manager who can bridge the gap between 
                 technical implementation and business strategy, or a technical leader who 
@@ -107,11 +111,11 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift animate-delay-200">
-            <h2 className="text-2xl font-semibold text-slate-800 mb-6">Current Status</h2>
-            <div className="space-y-4 text-slate-600">
+          <div className="border border-gray-200 rounded p-8">
+            <h2 className="text-2xl font-normal text-black mb-6">Current Status</h2>
+            <div className="space-y-4 text-gray-600">
               <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-slate-400 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
                 <span className="font-medium">Available for new opportunities</span>
               </div>
               <p>
@@ -130,8 +134,8 @@ export default function Contact() {
         </div>
 
         {/* Social Links */}
-        <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border mb-16 animate-on-scroll hover-lift">
-          <h2 className="text-2xl font-semibold text-slate-800 mb-8 text-center">Find Me Online</h2>
+        <div className="border border-gray-200 rounded p-8 mb-16">
+          <h2 className="text-2xl font-normal text-black mb-8">Find Me Online</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialLinks.map((link, index) => (
               <a
@@ -139,81 +143,80 @@ export default function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-slate-50/70 rounded-2xl p-6 text-center hover:bg-slate-100/70 transition-colors hover-scale"
-                style={{animationDelay: `${index * 0.1}s`}}
+                className="group border border-gray-200 rounded p-6 text-center hover:border-gray-300 transition-colors"
               >
-                <div className="text-3xl mb-3">{link.icon}</div>
-                <h3 className="font-semibold text-slate-800 mb-2 group-hover:text-slate-600 transition-colors">
+                <div className="text-3xl mb-3 flex justify-center">{link.icon}</div>
+                <h3 className="font-medium text-black mb-2 group-hover:text-gray-600 transition-colors">
                   {link.name}
                 </h3>
-                <p className="text-sm text-slate-600">{link.description}</p>
+                <p className="text-sm text-gray-600">{link.description}</p>
               </a>
             ))}
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift">
-          <h2 className="text-2xl font-semibold text-slate-800 mb-6">Send a Message</h2>
+        <div className="border border-gray-200 rounded p-8">
+          <h2 className="text-2xl font-normal text-black mb-6">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                   placeholder="your.email@example.com"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
+              <label htmlFor="subject" className="block text-sm font-medium text-black mb-2">
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                 placeholder="What's this about?"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={6}
-                className="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-slate-400 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                 placeholder="Tell me about your project or opportunity..."
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-slate-600 text-white py-3 px-6 rounded-2xl font-medium hover:bg-slate-700 transition-colors hover-lift soft-shadow"
+              className="w-full bg-black text-white py-3 px-6 rounded font-medium hover:bg-gray-800 transition-colors"
             >
               Send Message
             </button>
           </form>
-          <p className="text-sm text-slate-500 mt-4 text-center">
+          <p className="text-sm text-gray-500 mt-4 text-center">
             Note: This is a demo form. Please use the email or social links above to contact me directly.
           </p>
         </div>

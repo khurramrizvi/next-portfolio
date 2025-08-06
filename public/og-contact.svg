@@ -1,53 +1,60 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean white background -->
+  <rect width="1200" height="630" fill="#ffffff"/>
+  
+  <!-- Subtle grid pattern -->
   <defs>
-    <linearGradient id="contactBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f3e8ff;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#fef3c7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f0fdf4;stop-opacity:1" />
-    </linearGradient>
-    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#a855f7" flood-opacity="0.1"/>
-    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f5f5f5" stroke-width="1"/>
+    </pattern>
   </defs>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
   
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#contactBg)"/>
+  <!-- Main content area -->
+  <rect x="80" y="80" width="1040" height="470" fill="#ffffff" stroke="#e5e5e5" stroke-width="1" rx="8"/>
   
-  <!-- Decorative elements -->
-  <circle cx="120" cy="120" r="35" fill="#c084fc" opacity="0.3"/>
-  <circle cx="1080" cy="510" r="55" fill="#a7f3d0" opacity="0.4"/>
-  <rect x="950" y="100" width="45" height="45" rx="8" fill="#fed7aa" opacity="0.5" transform="rotate(20 972 122)"/>
+  <!-- Header section -->
+  <text x="140" y="160" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="600" fill="#000000">Contact</text>
   
-  <!-- Main content container -->
-  <rect x="140" y="130" width="920" height="370" rx="24" fill="white" opacity="0.9" filter="url(#softShadow)"/>
-  
-  <!-- Contact icon -->
-  <circle cx="240" cy="230" r="45" fill="#a855f7" opacity="0.1"/>
-  <text x="240" y="250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" text-anchor="middle" fill="#9333ea">📧</text>
-  
-  <!-- Main text -->
-  <text x="320" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="48" font-weight="700" fill="#1f2937">Get In Touch</text>
-  <text x="320" y="250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" fill="#6b7280">Let's discuss your next project</text>
+  <!-- Subtitle -->
+  <text x="140" y="200" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="400" fill="#666666">Let's discuss your next project</text>
   
   <!-- Contact methods -->
-  <g transform="translate(200, 300)">
-    <!-- Email -->
-    <circle cx="30" cy="30" r="20" fill="#dbeafe"/>
-    <text x="30" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" text-anchor="middle" fill="#1d4ed8">✉️</text>
-    <text x="70" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#374151">Email Communication</text>
-    
-    <!-- LinkedIn -->
-    <circle cx="30" cy="80" r="20" fill="#dbeafe"/>
-    <text x="30" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" text-anchor="middle" fill="#1d4ed8">💼</text>
-    <text x="70" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#374151">LinkedIn Profile</text>
-    
-    <!-- Resume -->
-    <circle cx="30" cy="130" r="20" fill="#ecfdf5"/>
-    <text x="30" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" text-anchor="middle" fill="#047857">📄</text>
-    <text x="70" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#374151">Download Resume</text>
-  </g>
+  <text x="140" y="260" font-family="Geist Mono, monospace" font-size="16" font-weight="400" fill="#999999">REACH OUT</text>
   
-  <!-- Call to action -->
-  <rect x="500" y="380" width="200" height="50" rx="25" fill="#a855f7" opacity="0.1" stroke="#9333ea" stroke-width="2"/>
-  <text x="600" y="410" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#7c3aed">Start Conversation</text>
+  <!-- Email section -->
+  <text x="140" y="300" font-family="Geist Mono, monospace" font-size="14" font-weight="400" fill="#999999">EMAIL</text>
+  <text x="140" y="325" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="400" fill="#000000">Professional Communication</text>
+  
+  <!-- LinkedIn section -->
+  <text x="140" y="370" font-family="Geist Mono, monospace" font-size="14" font-weight="400" fill="#999999">LINKEDIN</text>
+  <text x="140" y="395" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="400" fill="#000000">Professional Network</text>
+  
+  <!-- Resume section -->
+  <text x="140" y="440" font-family="Geist Mono, monospace" font-size="14" font-weight="400" fill="#999999">RESUME</text>
+  <text x="140" y="465" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="400" fill="#000000">Download CV</text>
+  
+  <!-- Call to action button -->
+  <rect x="140" y="500" width="160" height="32" fill="#000000" rx="4"/>
+  <text x="220" y="520" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#ffffff">Start Conversation</text>
+  
+  <!-- Contact info display -->
+  <rect x="600" y="280" width="400" height="200" fill="#f9f9f9" stroke="#e5e5e5" stroke-width="1" rx="4"/>
+  
+  <!-- Contact details -->
+  <text x="620" y="310" font-family="Geist Mono, monospace" font-size="12" font-weight="400" fill="#999999">CONTACT INFORMATION</text>
+  
+  <text x="620" y="340" font-family="Geist Mono, monospace" font-size="11" font-weight="400" fill="#666666">EMAIL</text>
+  <text x="620" y="355" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="400" fill="#000000">khurram@example.com</text>
+  
+  <text x="620" y="385" font-family="Geist Mono, monospace" font-size="11" font-weight="400" fill="#666666">LOCATION</text>
+  <text x="620" y="400" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="400" fill="#000000">Mumbai, India</text>
+  
+  <text x="620" y="430" font-family="Geist Mono, monospace" font-size="11" font-weight="400" fill="#666666">AVAILABILITY</text>
+  <text x="620" y="445" font-family="Geist, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="400" fill="#000000">Open to opportunities</text>
+  
+  <!-- Minimal accent elements -->
+  <rect x="950" y="140" width="2" height="120" fill="#000000"/>
+  <rect x="970" y="160" width="2" height="100" fill="#e5e5e5"/>
+  <rect x="990" y="150" width="2" height="110" fill="#e5e5e5"/>
 </svg>

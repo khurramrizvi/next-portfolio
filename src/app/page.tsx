@@ -47,76 +47,44 @@ export default function Home() {
       <ScrollAnimations />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 text-slate-600 animate-fade-in animate-delay-100">
-                <div className="w-12 h-12 rounded-full overflow-hidden hover-scale soft-shadow">
-                  <a href="https://linkedin.com/in/khurramrizvi" target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src="/assets/profile-photo.jpeg" 
-                      alt="Khurram Rizvi - LinkedIn Profile" 
-                      className="w-full h-full object-cover object-top hover:opacity-80 transition-opacity"
-                    />
-                  </a>
-                </div>
-                <span className="text-lg">Khurram Rizvi</span>
-                <a href="https://linkedin.com/in/khurramrizvi" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-700 transition-colors">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              
-              <div className="animate-fade-in animate-delay-200">
-                <h1 className="text-5xl lg:text-6xl font-medium text-slate-700 leading-tight">
-                    Product Manager
-                    <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-500 via-slate-600 to-slate-500 animate-breathe">
-                      Mumbai India
-                    </span>
-                    <span className="text-slate-400 animate-pulse">_</span>
-                  </h1>
-              </div>
-              
-              <p className="text-lg text-slate-600 max-w-lg leading-relaxed animate-fade-in animate-delay-300">
-                 7+ years of experience in tech, delivering products from concept to launch. 
-                 Recently promoted to Product Manager with a strong technical foundation.
-               </p>
-              
-              <div className="flex items-center gap-4 animate-fade-in animate-delay-400">
-                <Link 
-                  href="/contact" 
-                  className="bg-slate-500 text-white px-8 py-4 rounded-2xl font-medium hover:bg-slate-600 transition-all duration-300 hover-lift soft-shadow"
-                >
-                  RESUME
-                </Link>
-                <Link 
-                  href="/projects" 
-                  className="gentle-border text-slate-600 px-8 py-4 rounded-2xl font-medium hover:bg-slate-50 transition-all duration-300 hover-lift"
-                >
-                  PROJECTS
-                </Link>
-              </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            <div className="animate-fade-in">
+              <h1 className="text-6xl lg:text-7xl font-normal text-black leading-tight tracking-tight">
+                Product Manager
+              </h1>
+              <p className="text-xl text-gray-600 mt-4 max-w-2xl">
+                7+ years of experience in tech, delivering products from concept to launch. 
+                Recently promoted to Product Manager with a strong technical foundation.
+              </p>
             </div>
             
-            {/* Right Content - 3D Character */}
-           {/* <ThreeDAvater/> */}
+            <div className="flex items-center gap-4 animate-fade-in animate-delay-200">
+              <Link 
+                href="/contact" 
+                className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors"
+              >
+                Resume
+              </Link>
+              <Link 
+                href="/projects" 
+                className="border border-gray-300 text-black px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors"
+              >
+                Projects
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Me Section */}
-      <section className="py-20 px-6 bg-white/30 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-medium text-slate-700 mb-8 animate-on-scroll">About Me</h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-20 px-6 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-12">
+            <h2 className="text-4xl font-normal text-black animate-on-scroll">About</h2>
+            
             <div className="space-y-6 animate-on-scroll">
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                  With 7+ years in the tech industry, I've evolved from a passionate 
                  developer to a Product Manager who understands both the technical 
                  and business sides of product development.
@@ -134,59 +102,43 @@ export default function Home() {
                  ensuring products are both technically sound and market-ready.
                </p>
             </div>
-            
-            <div className="relative animate-on-scroll">
-              <div className="w-full h-[500px] bg-gradient-to-br from-slate-100 to-slate-200 rounded-3xl overflow-hidden relative hover-scale soft-shadow">
-                <img 
-                  src="/assets/profile-photo.jpeg" 
-                  alt="Khurram Rizvi - Professional Photo" 
-                  className="w-full h-full object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift">
-            <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 animate-float">
-              <span className="text-2xl">📱</span>
-            </div>
-            <h3 className="text-xl font-medium text-slate-700 mb-3">Mobile & Web Development</h3>
-            <p className="text-slate-600 mb-4">Cross-platform development with Flutter and modern web technologies</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">Flutter</span>
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">Mobile Apps</span>
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">Web Apps</span>
-            </div>
-          </div>
+      <section className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200">
+        <div className="space-y-12">
+          <h2 className="text-4xl font-normal text-black animate-on-scroll">Skills</h2>
           
-          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift animate-delay-200">
-            <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 animate-float animate-delay-500">
-              <span className="text-2xl">⚛️</span>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="border border-gray-200 rounded-lg p-6 animate-on-scroll hover:border-gray-300 transition-colors">
+              <h3 className="text-lg font-medium text-black mb-3">Mobile & Web Development</h3>
+              <p className="text-gray-600 mb-4 text-sm">Cross-platform development with Flutter and modern web technologies</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Flutter</span>
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Mobile Apps</span>
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Web Apps</span>
+              </div>
             </div>
-            <h3 className="text-xl font-medium text-slate-700 mb-3">Full-Stack Development</h3>
-            <p className="text-slate-600 mb-4">Frontend expertise with React/NextJS and backend development experience</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">React</span>
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">NextJS</span>
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">Backend</span>
+            
+            <div className="border border-gray-200 rounded-lg p-6 animate-on-scroll hover:border-gray-300 transition-colors animate-delay-200">
+              <h3 className="text-lg font-medium text-black mb-3">Full-Stack Development</h3>
+              <p className="text-gray-600 mb-4 text-sm">Frontend expertise with React/NextJS and backend development experience</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">React</span>
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">NextJS</span>
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Backend</span>
+              </div>
             </div>
-          </div>
-          
-          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 soft-shadow gentle-border animate-on-scroll hover-lift animate-delay-400">
-            <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 animate-float animate-delay-600">
-              <span className="text-2xl">🎯</span>
-            </div>
-            <h3 className="text-xl font-medium text-slate-700 mb-3">Product & Strategy</h3>
-            <p className="text-slate-600 mb-4">Product management and strategic thinking</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">Product Strategy</span>
-              <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm hover-scale">Leadership</span>
+            
+            <div className="border border-gray-200 rounded-lg p-6 animate-on-scroll hover:border-gray-300 transition-colors animate-delay-400">
+              <h3 className="text-lg font-medium text-black mb-3">Product & Strategy</h3>
+              <p className="text-gray-600 mb-4 text-sm">Product management and strategic thinking</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Product Strategy</span>
+                <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Leadership</span>
+              </div>
             </div>
           </div>
         </div>
